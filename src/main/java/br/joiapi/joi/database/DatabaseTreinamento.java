@@ -82,7 +82,7 @@ public class DatabaseTreinamento {
                 treinoAcademia.setIdTreino(resultSet.getLong(TreinoAcademia.NM_IdTreinoAcademia));
                 treinoAcademia.setNomeTreino(resultSet.getString(TreinoAcademia.NM_NomeTreinoAcademia));
                 treinoAcademia.setSeriesTreino(resultSet.getInt(TreinoAcademia.NM_SeriesTreinoAcademia));
-                treinoAcademia.setSeriesTreino(resultSet.getInt(TreinoAcademia.NM_SeriesTreinoAcademia));
+                treinoAcademia.setRepeticoesTreino(resultSet.getInt(TreinoAcademia.NM_RepeticoesTreinoAcademia));
                 treinoAcademia.setDiasTreino(resultSet.getString(TreinoAcademia.NM_DiasTreinoAcademia));
                 
                 if (resultSet.getString(TreinoAcademia.NM_DescricaoTreinoAcademia) != null) {
