@@ -2,6 +2,7 @@ package br.joiapi.joi.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -52,4 +53,15 @@ public class DatabaseConnection {
 		return statement;
 	}
 
+	public PreparedStatement createPreparedStatement(String pSQL) {
+		PreparedStatement preparedStatement = null;
+
+		try {
+			preparedStatement = connection.prepareStatement(pSQL);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return preparedStatement;
+	}
 }
